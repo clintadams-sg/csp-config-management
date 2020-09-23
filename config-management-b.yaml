@@ -9,5 +9,6 @@ spec:
   git:
     syncRepo: https://github.com/bkauf/csp-config-management/
     secretType: none
-    policyDir: "foo-corp"
+   # policyDir: "foo-corp"
+    policyDir: "hello-namespace/config-root"
     syncBranch: 1.0.0

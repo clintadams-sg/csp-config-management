@@ -1,0 +1,20 @@
+# config-management.yaml
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  policyController:
+    enabled: true
+    # Uncomment to prevent the template library from being installed
+    templateLibraryInstalled: false
+    # Uncomment to disable audit, adjust value to set audit interval
+    auditIntervalSeconds: 0
+    # Uncomment to log all denies and dryrun failures
+    logDeniesEnabled: true
+  #clusterName: demo-cluster
+  git:
+    syncRepo: https://github.com/bkauf/csp-config-management/
+    secretType: none
+    policyDir: "cicd-corp"
+    syncBranch: 1.0.0

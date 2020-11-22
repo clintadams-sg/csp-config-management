@@ -1,7 +1,14 @@
+kind: Cluster
+apiVersion: clusterregistry.k8s.io/v1alpha1
+metadata:
+  name: demo-cluster
+  labels:
+    environment: demo
+---
 kind: ClusterSelector
 apiVersion: configmanagement.gke.io/v1
 metadata:
-  name: demo-cluster
+  name: selector-env-demo
 spec:
   selector:
     matchLabels:

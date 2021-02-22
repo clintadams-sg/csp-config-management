@@ -5,10 +5,10 @@ metadata:
   name: config-management
 spec:
   # clusterName is required and must be unique among all managed clusters
-  clusterName: external-cluster-b
+  clusterName: cluster-east
   git:
     syncRepo: https://github.com/bkauf/csp-config-management/
     secretType: none
-    policyDir: "cicd-corp/config-root"
+    policyDir: "tech-summit"
    # policyDir: "hello-namespace/config-root"
     syncBranch: 1.0.0

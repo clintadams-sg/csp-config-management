@@ -18,8 +18,6 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    configmanagement.gke.io/cluster-selector: cluster-east
   name: frontend-production
 spec:
   replicas: 1
@@ -38,7 +36,7 @@ spec:
       name: frontend
     spec:
       containers:
-      - image: gcr.io/anthos-tech-summit/gcpdemo:7757d350-83ec-4607-b4a6-bb002fbe02f2
+      - image: gcr.io/anthos-tech-summit/gcpdemo:c4bed9d9-7f33-470d-9418-2580cc8da985
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

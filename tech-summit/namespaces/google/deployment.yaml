@@ -36,7 +36,7 @@ spec:
       name: frontend
     spec:
       containers:
-      - image: gcr.io/anthos-tech-summit/gcpdemo:f5850520-83c9-4e37-8ee6-2a97427e06fd
+      - image: gcr.io/anthos-tech-summit/gcpdemo:e7bb0ffd-7f4c-4c5f-898a-b7a3a8b1f501
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

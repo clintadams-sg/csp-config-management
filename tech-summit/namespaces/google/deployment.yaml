@@ -20,7 +20,7 @@ kind: Deployment
 metadata:
   name: frontend-production
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: frontend-production

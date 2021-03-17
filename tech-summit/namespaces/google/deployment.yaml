@@ -20,7 +20,7 @@ kind: Deployment
 metadata:
   name: frontend-production
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: frontend-production
@@ -36,7 +36,7 @@ spec:
       name: frontend
     spec:
       containers:
-      - image: gcr.io/anthos-tech-summit/gcpdemo:40c4f9f9-c3dc-4a02-996c-4d7c257f8f1a
+      - image: gcr.io/anthos-tech-summit/gcpdemo:5bba0c0a-48ed-4247-b2b5-4941b75e97ab
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

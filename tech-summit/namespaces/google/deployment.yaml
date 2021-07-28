@@ -22,7 +22,7 @@ metadata:
   annotations:
     #configmanagement.gke.io/cluster-selector: cluster-east
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: frontend-production

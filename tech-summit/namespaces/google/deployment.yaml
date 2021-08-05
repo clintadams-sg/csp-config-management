@@ -4,6 +4,8 @@ metadata:
   labels:
     app: frontend-production
   name: frontend-production
+  annotations:
+    configmanagement.gke.io/cluster-selector: gcp-cluster
 spec:
   ports:
   - name: 80-80
@@ -63,7 +65,7 @@ kind: Deployment
 metadata:
   name: frontend-production
   annotations:
-    configmanagement.gke.io/cluster-selector: azure-cluster
+    configmanagement.gke.io/cluster-selector: aws
 spec:
   replicas: 1
   selector:

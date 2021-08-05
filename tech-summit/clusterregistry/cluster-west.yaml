@@ -1,6 +1,6 @@
 kind: Cluster
 apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
-  name: cluster-west
+  name: aws-cluster
   labels:
-    environment: cluster-west
+    environment: aws-cluster

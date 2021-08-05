@@ -63,7 +63,7 @@ kind: Deployment
 metadata:
   name: frontend-production
   annotations:
-    configmanagement.gke.io/cluster-selector: aw4s-cluster
+    configmanagement.gke.io/cluster-selector: azure-cluster
 spec:
   replicas: 1
   selector:

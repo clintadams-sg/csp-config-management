@@ -22,7 +22,7 @@ kind: Deployment
 metadata:
   name: frontend-production
   annotations:
-    configmanagement.gke.io/cluster-selector: gcp-cluster
+  #  configmanagement.gke.io/cluster-selector: gcp-cluster
 spec:
   replicas: 1
   selector:

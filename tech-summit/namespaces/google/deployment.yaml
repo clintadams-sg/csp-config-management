@@ -126,7 +126,7 @@ spec:
       name: frontend
     spec:
       containers:
-      - image: bkauf/gcpdemo
+      - image: anthos.azurecr.io/gcpdemo:latest
         env:
         - name: CLOUD
           value: "azure"
@@ -145,4 +145,6 @@ spec:
             port: 8080
           initialDelaySeconds: 20
           periodSeconds: 5
+      imagePullSecrets:
+        - name: anthos-acr
 

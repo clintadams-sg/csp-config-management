@@ -110,7 +110,7 @@ metadata:
   annotations:
     configmanagement.gke.io/cluster-selector: azure-cluster
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: frontend-production

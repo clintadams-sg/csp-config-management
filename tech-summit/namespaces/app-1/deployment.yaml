@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    configmanagement.gke.io/cluster-selector: gcp-cluster
+  labels:
+    app: frontend-production
+  name: frontend-production
+spec:
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: frontend-production
+  sessionAffinity: None
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    configmanagement.gke.io/cluster-selector: gcp-cluster
+  name: frontend-production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-production
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: frontend-production
+      name: frontend
+    spec:
+      containers:
+      - env:
+        - name: CLOUD
+          value: gcp
+        image: gcr.io/anthos-tech-summit/gcpdemo:16fea7f2-30e5-40db-9081-b1bd201a96af
+        imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+        name: webserver
+        ports:
+        - containerPort: 8080
+          name: frontend
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 20
+          periodSeconds: 5

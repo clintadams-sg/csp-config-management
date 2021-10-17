@@ -43,7 +43,7 @@ spec:
       - env:
         - name: CLOUD
           value: gcp
-        image: gcr.io/anthos-tech-summit/gcpdemo:acb3b01b-af2c-4862-936d-4f66d99dbab5
+        image: gcr.io/bkauf-monitoring/gcpdemo:9f234e11-153d-4417-90f7-1bfd37e3dee9
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

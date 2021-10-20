@@ -24,7 +24,7 @@ metadata:
     configmanagement.gke.io/cluster-selector: gcp-cluster
   name: frontend-production
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: frontend-production

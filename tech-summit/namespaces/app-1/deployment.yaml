@@ -43,7 +43,7 @@ spec:
       - env:
         - name: CLOUD
           value: gcp
-        image: gcr.io/bkauf-monitoring/gcpdemo:9f234e11-153d-4417-90f7-1bfd37e3dee9
+        image: gcr.io/bkauf-monitoring/gcpdemo:4e566d5b-0658-47aa-b12c-a75e8edec35d
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

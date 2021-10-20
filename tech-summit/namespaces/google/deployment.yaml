@@ -67,7 +67,7 @@ metadata:
   annotations:
     configmanagement.gke.io/cluster-selector: aws-cluster
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend-production
@@ -110,7 +110,7 @@ metadata:
   annotations:
     configmanagement.gke.io/cluster-selector: azure-cluster
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend-production

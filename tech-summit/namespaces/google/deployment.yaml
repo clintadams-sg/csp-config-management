@@ -126,7 +126,8 @@ spec:
       name: frontend
     spec:
       containers:
-      - image: anthos.azurecr.io/gcpdemo:latest
+      #- image: anthos.azurecr.io/gcpdemo:latest
+      - image: gcr.io/hyggeco-co/gcpdemo:1
         env:
         - name: CLOUD
           value: "azure"
@@ -146,4 +147,5 @@ spec:
           initialDelaySeconds: 20
           periodSeconds: 5
       imagePullSecrets:
-        - name: anthos-acr
+        #- name: anthos-acr
+        - name: gcr-json-key

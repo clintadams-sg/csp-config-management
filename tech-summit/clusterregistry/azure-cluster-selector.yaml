@@ -5,4 +5,4 @@ metadata:
 spec:
   selector:
     matchLabels:
-      environment: azure-cluster
+      environment: azure-cluster-vu

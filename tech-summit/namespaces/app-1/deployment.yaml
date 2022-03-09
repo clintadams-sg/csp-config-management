@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    configmanagement.gke.io/cluster-selector: gcp-cluster
+    configmanagement.gke.io/cluster-selector: aws-cluster
   labels:
     app: frontend-production
   name: frontend-production
@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    configmanagement.gke.io/cluster-selector: gcp-cluster
+    configmanagement.gke.io/cluster-selector: aws-cluster
   name: frontend-production
 spec:
   replicas: 1
@@ -43,7 +43,7 @@ spec:
       - env:
         - name: CLOUD
           value: gcp
-        image: gcr.io/bkauf-monitoring/gcpdemo:4e566d5b-0658-47aa-b12c-a75e8edec35d
+        image: bkauf/gcpdemo
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

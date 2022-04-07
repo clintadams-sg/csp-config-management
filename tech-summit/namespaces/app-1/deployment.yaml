@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    configmanagement.gke.io/cluster-selector: aws-cluster
+    configmanagement.gke.io/cluster-selector: attached
   labels:
     app: frontend-production
   name: frontend-production
@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    configmanagement.gke.io/cluster-selector: aws-cluster
+    configmanagement.gke.io/cluster-selector: attached
   name: frontend-production
 spec:
   replicas: 1

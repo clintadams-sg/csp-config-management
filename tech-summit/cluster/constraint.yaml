@@ -9,4 +9,4 @@ spec:
         kinds: ["Namespace"]
   parameters:
     labels:
-      - key : "gatekeeper"
+      - key : "env"

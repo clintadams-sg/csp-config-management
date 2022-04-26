@@ -23,7 +23,7 @@ spec:
 
         violation[{"msg": msg, "details": {"missing_labels": missing}}] {
           provided := {label | input.review.object.metadata.labels[label]}
-          required := {label | label := input.parameters.labels[_]}
+          required := {label | label := input.parameters.labels[_].key}
           missing := required - provided
           count(missing) > 0
           msg := sprintf("you must provide env labels: %v", [missing])

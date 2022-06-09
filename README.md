@@ -7,6 +7,7 @@ Kubernetes cluster and create a custom resource that points at one of the
 included examples by setting the `policyDir` field to the directory of the
 desired example (e.g. `foo-corp`).
 
+
 For a more complete experience, you can fork this repository, which will allow
 you to make changes and experiment by adding configurations of your own to the
 examples contained here. When forking the repository, you will need to change

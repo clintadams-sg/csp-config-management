@@ -65,7 +65,7 @@ kind: Deployment
 metadata:
   name: frontend-production
   annotations:
-   # configmanagement.gke.io/cluster-selector: aws-cluster
+    configmanagement.gke.io/cluster-selector: aws-cluster
 spec:
   replicas: 2
   selector:

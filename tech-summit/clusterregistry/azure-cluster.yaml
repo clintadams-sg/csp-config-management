@@ -1,6 +1,6 @@
 kind: Cluster
 apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
-  name: azure-cluster-tt
+  name: azure-cluster-qc
   labels:
     environment: azure-cluster

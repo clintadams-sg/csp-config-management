@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: brian-test2
+  labels:
+    env: prod
+  annotations:
+    audit: "true"

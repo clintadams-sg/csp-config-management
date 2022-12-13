@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: frontend-production
-  name: frontend-production
+    app: security-tools-fn
+  name: security-tools-fn
   annotations:
     #configmanagement.gke.io/cluster-selector: gcp-cluster
 spec:
@@ -13,7 +13,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: frontend-production
+    app: security-tools
   sessionAffinity: None
   type: LoadBalancer
 ---
@@ -27,7 +27,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend-production
+      app: security-tools
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -36,8 +36,8 @@ spec:
   template:
     metadata:
       labels:
-        app: frontend-production
-      name: frontend
+        app: security-tools
+      name: security-tools
     spec:
       containers:
       - image: bkauf/gcpdemo
@@ -63,14 +63,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-production
+  name: security-tools
   annotations:
     configmanagement.gke.io/cluster-selector: aws-cluster
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: frontend-production
+      app: security-tools
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -79,7 +79,7 @@ spec:
   template:
     metadata:
       labels:
-        app: frontend-production
+        app: security-tools
       name: frontend
     spec:
       containers:

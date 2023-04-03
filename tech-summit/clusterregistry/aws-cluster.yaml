@@ -1,6 +1,6 @@
 kind: Cluster
 apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
-  name: bkauf-aws-gke-wh
+  name: anthos-demo-gp
   labels:
     environment: aws-cluster
